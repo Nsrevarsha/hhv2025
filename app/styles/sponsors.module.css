@@ -1,0 +1,212 @@
+.sponsorsSection {
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsorsSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--color-pink-dark);
+  margin-bottom: 4rem;
+  font-family: "Arial Black", Gadget, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0px white, 6px 6px 0px rgba(216, 88, 147, 0.2);
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--color-pink);
+  border-radius: 2px;
+}
+
+.logoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem;
+  align-items: stretch;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.logoWrapper {
+  background: rgba(255, 255, 255, 0.95);
+  border: 3px solid var(--color-pink);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(216, 88, 147, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  width: 100%;
+  max-width: 280px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logoWrapper:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(216, 88, 147, 0.3);
+  border-color: var(--color-pink-dark);
+}
+
+.logoWrapper::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+  transform: rotate(45deg);
+  transition: all 0.6s;
+  opacity: 0;
+}
+
+.logoWrapper:hover::after {
+  animation: shine 1.5s ease-out;
+}
+
+@keyframes shine {
+  0% {
+    opacity: 0;
+    transform: translateX(-200%) rotate(45deg);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(200%) rotate(45deg);
+  }
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.loading {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--color-white);
+  text-shadow: 2px 2px 0 var(--color-pink-dark);
+  padding: 2rem;
+  font-family: "Courier New", monospace;
+  animation: pulse-bg 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+@media (max-width: 1024px) {
+  .sponsorsSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .logoGrid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+  }
+
+  .logoWrapper {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sponsorsSection {
+    padding: 2.5rem 1rem;
+  }
+
+  .logoGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .logoWrapper {
+    padding: 1rem;
+    max-width: 180px;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    max-height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsorsSection {
+    padding: 2rem 0.75rem;
+  }
+
+  .logoGrid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .logoWrapper {
+    padding: 0.75rem;
+    max-width: 150px;
+  }
+
+  .logo {
+    max-height: 50px;
+  }
+}
