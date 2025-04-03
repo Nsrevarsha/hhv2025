@@ -4,76 +4,73 @@
   padding: 20px;
 }
 
-.timeline {
-  position: relative;
-  padding: 20px 0;
+.scheduleSection {
+  padding: 4rem 2rem;
 }
 
-.timeline::before {
-  content: '';
+.sectionTitle {
+  text-align: center;
+  color: var(--color-pink-dark);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timelineLine {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 100%;
+  width: 2px;
   background: var(--color-pink);
-  border-radius: 4px;
-  box-shadow: 0 0 10px var(--color-pink-light);
+  height: 100%;
+  transform: translateX(-50%);
 }
 
 .timelineEvent {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .timelineNode {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   background: var(--color-pink);
-  border: 3px solid var(--color-white);
   border-radius: 50%;
-  z-index: 1;
-  box-shadow: 0 0 10px var(--color-pink-light);
-  transition: all 0.3s ease;
-}
-
-.timelineNode:hover {
-  background: var(--color-pink-dark);
-  transform: translateX(-50%) scale(1.2);
+  border: 3px solid #000;
+  z-index: 2;
 }
 
 .timelineContent {
   width: 45%;
-  padding: 20px;
-  background: var(--color-white);
-  border: 2px solid var(--color-pink-light);
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.timelineContent:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  position: relative;
 }
 
 .timelineEvent:nth-child(odd) .timelineContent {
   margin-right: 55%;
+  text-align: right;
 }
 
 .timelineEvent:nth-child(even) .timelineContent {
   margin-left: 55%;
+  text-align: left;
 }
 
 .timelineTitle {
-  font-family: "Courier New", monospace;
   color: var(--color-pink-dark);
   font-size: 1.2em;
   margin-bottom: 10px;
@@ -87,73 +84,27 @@
 }
 
 .timelineDescription {
-  color: var(--color-black);
   line-height: 1.5;
 }
 
 @media (max-width: 768px) {
-  .scheduleContainer {
-    margin: 20px auto;
-    padding: 15px;
-  }
-
-  .timeline::before {
-    left: 30px;
-  }
-
-  .timelineNode {
-    left: 30px;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 20px;
-    border-width: 2px;
-  }
-
-  .timelineContent {
-    width: calc(100% - 80px);
-    margin-left: 60px !important;
-    margin-right: 0 !important;
-    padding: 15px;
+  .timelineLine {
+    left: 20px;
   }
 
   .timelineEvent {
+    margin-left: 20px;
     justify-content: flex-start;
-    margin-bottom: 25px;
   }
 
-  .timelineTitle {
-    font-size: 1.1em;
-  }
-
-  .timelineDate {
-    font-size: 0.8em;
-  }
-
-  .timelineDescription {
-    font-size: 0.9em;
-  }
-}
-
-@media (max-width: 480px) {
-  .scheduleContainer {
-    margin: 15px auto;
-    padding: 10px;
+  .timelineNode {
+    left: 0;
+    transform: translateX(-50%);
   }
 
   .timelineContent {
-    padding: 12px;
-  }
-
-  .timelineTitle {
-    font-size: 1em;
-  }
-
-  .timelineDate {
-    font-size: 0.75em;
-  }
-
-  .timelineDescription {
-    font-size: 0.85em;
-    line-height: 1.4;
+    width: calc(100% - 40px);
+    margin: 0 0 0 30px !important;
+    text-align: left !important;
   }
 }

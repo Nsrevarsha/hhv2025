@@ -1,0 +1,78 @@
+.themes-section {
+  padding: 4rem 0;
+
+}
+
+.title-themes {
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 2.5rem;
+  color: var(--color-pink-dark);
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(236, 110, 152, 0.1);
+}
+
+.themes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.theme-card {
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border: 2px solid #000000; /* Changed from var(--color-pink-light) to solid black */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.theme-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-pink); /* Maintains pink accent on hover */
+}
+
+.theme-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.theme-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.theme-title,
+.theme-subtitle {
+  font-size: 1.5rem;
+  color: var(--color-pink-dark);
+  letter-spacing: 1px;  
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .themes-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  
+  .theme-card {
+    padding: 1.5rem;
+  }
+
+  .title-themes {
+    font-size: 2rem;
+  }
+}

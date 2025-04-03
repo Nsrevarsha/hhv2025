@@ -1,0 +1,95 @@
+.teamSection {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--color-pink-dark);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.leadersGrid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.leaderCard {
+  width: 280px;
+}
+
+.imageHolder {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--color-pink);
+}
+
+.imageHolder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.leaderCard h3 {
+  color: var(--color-pink-dark);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.leaderCard p {
+  color: var(--color-gray);
+  font-size: 1.1rem;
+}
+
+.memberCard {
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+.memberImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.memberCard h3 {
+  color: var(--color-pink-dark);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+
+
+@media (max-width: 768px) {
+  .leadersGrid {
+    gap: 2rem;
+  }
+
+  .imageHolder {
+    width: 160px;
+    height: 160px;
+  }
+
+  .memberImage {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+
+.logoImage {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  background: transparent; /* Ensure background is transparent */
+  border: none; /* Remove any borders */
+}

@@ -23,33 +23,13 @@ export default function About() {
   }, []);
 
   return (
-    <section className={styles.aboutSection}>
+    <section id="about" className={styles.aboutSection}>
       <div className={styles.container}>
         <h2 className={styles.title}>About WTM REC Hackathon</h2>
         <div className={styles.content} ref={textRef}>
           <p className={styles.description}>
-            Welcome to WTM REC Hackathon - where innovation meets inclusivity! 
-            This unique hackathon experience is designed to empower and inspire 
-            tech enthusiasts to create solutions that make a difference. Join us 
-            for an exciting journey of coding, collaboration, and creativity.
+          HackHerVerse is an inter-college, 24-hour online hackathon exclusively for women, organized by Women Techmakers Rajalakshmi Engineering College --a vertical of Google Developer Groups On Campus - REC, Chennai. This event is designed to empower, inspire, and upskill women in technology, providing a collaborative and inclusive environment to solve real-world challenges through innovation.
           </p>
-          <div className={styles.highlights}>
-            <div className={styles.highlight}>
-              <span className={styles.icon}>🚀</span>
-              <h3>24 Hours of Innovation</h3>
-              <p>Unleash your creativity in an intensive coding experience</p>
-            </div>
-            <div className={styles.highlight}>
-              <span className={styles.icon}>👥</span>
-              <h3>Team Building</h3>
-              <p>Collaborate with like-minded innovators</p>
-            </div>
-            <div className={styles.highlight}>
-              <span className={styles.icon}>🏆</span>
-              <h3>Amazing Prizes</h3>
-              <p>Win exciting rewards and recognition</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

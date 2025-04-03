@@ -6,58 +6,53 @@ import styles from '../styles/schedule.module.css';
 const initialEvents = [
   {
     id: 1,
-    title: 'Round 1: Project Kickoff',
-    date: 'Day 1 - Morning',
-    description: 'Team formation, project ideation, and initial planning phase.'
+    title: 'APRIL 4',
+    description: 'Official announcement & registration opens for Round 1. Teams can sign up and access guidelines.'
   },
   {
     id: 2,
-    title: 'Round 2: Development Sprint',
-    date: 'Day 1 - Afternoon',
-    description: 'Core feature development and technical implementation.'
+    title: 'April 4 – 24 ',
+    description: 'Mentorship sessions for Round 1 participants to refine their ideas with expert guidance.'
   },
   {
     id: 3,
-    title: 'Round 3: Progress Review',
-    date: 'Day 2 - Morning',
-    description: 'Project milestone check-in and feedback session.'
+    title: 'April 24',
+    description: 'Deadline for Round 1 idea submissions. Teams submit proposals for evaluation.'
   },
+  ,
   {
     id: 4,
-    title: 'Final Round: Project Showcase',
-    date: 'Day 2 - Afternoon',
-    description: 'Final presentations, demos, and project evaluation.'
+    title: 'April 28',
+    description: 'Announcement of shortlisted teams moving to the final round.'
+  },
+  {
+    id: 5,
+    title: 'April 29 – May 2',
+    description: 'Mentorship sessions to help finalists develop prototypes and prepare for the final hackathon.'
+  },
+  {
+    id: 6,
+    title: 'May 3 – 4 ',
+    description: 'Final hackathon where teams build, present, and compete for top prizes.'
   }
 ];
 
 export default function Schedule() {
   const [events, setEvents] = useState(initialEvents);
 
-  const addNewEvent = () => {
-    const newEvent = {
-      id: events.length + 1,
-      title: `New Round ${events.length + 1}`,
-      date: 'TBD',
-      description: 'Description pending...'
-    };
-    setEvents([...events, newEvent]);
-  };
-
   return (
-    <div className={styles.scheduleContainer}>
-      <h2 style={{ 
-        textAlign: 'center', 
-        color: 'var(--color-pink-dark)',
-        marginBottom: '30px',
-        fontFamily: '"Courier New", monospace'
-      }}>
+    <section id="schedule" className={styles.scheduleSection}>
+      <h2 className={styles.sectionTitle}>
         Hackathon Timeline
       </h2>
       
       <div className={styles.timeline}>
+        <div className={styles.timelineLine}></div>
         {events.map((event) => (
           <div key={event.id} className={styles.timelineEvent}>
-            <div className={styles.timelineNode}></div>
+            <div className={styles.timelineNode}>
+              <div className={styles.nodeCircle}></div>
+            </div>
             <div className={styles.timelineContent}>
               <h3 className={styles.timelineTitle}>{event.title}</h3>
               <div className={styles.timelineDate}>{event.date}</div>
@@ -66,13 +61,6 @@ export default function Schedule() {
           </div>
         ))}
       </div>
-
-      <div style={{ 
-        textAlign: 'center', 
-        marginTop: '30px' 
-      }}>
-  
-      </div>
-    </div>
+    </section>
   );
 }

@@ -1,5 +1,4 @@
-.footer {
-  background: linear-gradient(135deg, var(--color-pink-light) 0%, var(--color-purple-light) 100%);
+.footer-container {
   padding: 40px 20px;
   margin-top: auto;
   border-top: 3px outset var(--color-pink);
@@ -76,4 +75,33 @@
     width: 20px;
     height: 20px;
   }
+}
+
+.contact-details {
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.contact-item {
+  margin: 0.75rem 0;
+  color: var(--color-black);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.contact-item a {
+  color: var(--color-pink-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: var(--color-pink);
+  text-decoration: underline;
+}
+
+.contact-title {
+  margin-top: 1.5rem;
 }

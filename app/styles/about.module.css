@@ -1,11 +1,10 @@
 .aboutSection {
-  padding: 40px 20px;
   position: relative;
   overflow: hidden;
-  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 4rem 2rem; /* Adjusted padding for better spacing */
 }
 
 .container {
@@ -21,8 +20,8 @@
   text-align: center;
   color: rgb(236, 110, 152);
   text-transform: uppercase;
-  margin-bottom: 40px;
-  text-shadow: 2px 2px var(--color-white)
+  margin-bottom: 50px; /* Increased margin for better separation */
+  text-shadow: 2px 2px var(--color-white);
 }
 
 .content {
@@ -38,30 +37,30 @@
 
 .description {
   text-align: center;
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 40px;
+  font-size: 18px;
+  line-height: 1.8; /* Increased line-height for better readability */
+  margin-bottom: 50px; /* Increased margin for better separation */
   color: var(--color-black);
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
-  background: var(--color-white);
-  border: 2px solid var(--color-pink);
-  border-radius: 8px;
-  box-shadow: 3px 3px 0 var(--color-pink);
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 .highlights {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 2.5rem; /* Increased gap for better spacing */
+  margin-top: 3rem; /* Increased margin for better separation */
 }
 
 .highlight {
   background: var(--color-white);
-  padding: 20px;
+  padding: 25px; /* Increased padding for better spacing */
   border: 2px solid var(--color-pink);
   border-radius: 8px;
   text-align: center;
@@ -108,4 +107,55 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+}
+
+.about {
+  padding: clamp(40px, 8vw, 100px) 0;
+  background: linear-gradient(135deg, var(--color-pink-light) 0%, var(--color-white) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+.aboutText {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideInLeft 0.8s forwards;
+  animation-delay: 0.2s;
+}
+
+/* Text elements animation */
+.aboutText h2 {
+  position: relative;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+  animation-delay: 0.6s;
+}
+
+.aboutText p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+  animation-delay: 0.8s;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .aboutContent {
+    grid-template-columns: 1fr;
+  }
+  
 }

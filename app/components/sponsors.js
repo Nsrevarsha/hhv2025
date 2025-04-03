@@ -40,7 +40,7 @@ export default function Sponsors() {
   }, []);
 
   return (
-    <section className={styles.sponsorsSection}>
+    <section id="sponsors" className={styles.sponsorsSection}>
       <div className={styles.container}>
         <h2 className={styles.title}>Our Collaborators</h2>
         <div className={styles.logoGrid}>
